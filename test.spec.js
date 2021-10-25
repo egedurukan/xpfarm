@@ -3,7 +3,24 @@ const chai = require('chai');
 chai.should();
 
 function buildTower (floor) {
-    return validateParameter(floor);
+
+    let towerArray = [];
+
+    if(!validateParameter(floor)) return false
+
+    let towerLine = "";
+    for(i = 0; i < floor; i++){
+        if(i === 0) {
+            towerLine += "*";
+        } else {
+            towerLine += "**";
+        }
+
+        towerArray.push(towerLine);
+    }
+    
+    console.log(towerArray)
+    return towerArray;
 }
 
 function validateParameter(param) {
@@ -20,6 +37,6 @@ describe('test cases for buildCastle function', () => {
     });
 
     it('The floors total asterixes incremented by 2', () => {
-        buildTower(1).should.deepEqual(["*"]);
+        chai.assert.deepEqual(buildTower(1), ["*"]);
     });
 })
