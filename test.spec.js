@@ -13,8 +13,13 @@ function validateParameter(param) {
 describe('test cases for buildCastle function', () => {
     it('The parameter must be number', () => {
         buildTower("One").should.equal(false);
-    })
+    });
+
     it('The parameter must be bigger than 0', () => {
         buildTower(1).should.equal(true);
-    })
+    });
+
+    it('The floors total asterixes incremented by 2', () => {
+        buildTower(1).should.deepEqual(["*"]);
+    });
 })
