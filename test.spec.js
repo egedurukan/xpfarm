@@ -19,7 +19,6 @@ function buildTower (floor) {
         towerArray.push(towerLine);
     }
     
-    console.log(towerArray)
     return towerArray;
 }
 
@@ -33,7 +32,7 @@ describe('test cases for buildCastle function', () => {
     });
 
     it('The parameter must be bigger than 0', () => {
-        buildTower(1).should.equal(true);
+        buildTower(-1).should.equal(false);
     });
 
     it('The floors total asterixes incremented by 2', () => {
