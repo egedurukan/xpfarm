@@ -38,4 +38,8 @@ describe('test cases for buildCastle function', () => {
     it('The floors total asterixes incremented by 2', () => {
         chai.assert.deepEqual(buildTower(1), ["*"]);
     });
+
+    it('Spaces should be added according to the floor lenght', () => {
+        chai.assert.deepEqual(buildTower(3), ["  *  ", " *** ", "*****"]);
+    })
 })
