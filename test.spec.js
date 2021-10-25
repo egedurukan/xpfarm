@@ -1,8 +1,6 @@
 const chai = require('chai');
+const { buildCastle } = require('./buildCastle');
 chai.should();
-
-import { it } from 'mocha';
-import buildCastle from './buildCastle';
 
 describe('test cases for buildCastle function', () => {
     it('The parameter must be number', () => {
