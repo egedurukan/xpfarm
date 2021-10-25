@@ -1,9 +1,13 @@
 const chai = require('chai');
-const { buildCastle } = require('./buildCastle');
+//import { buildTower } from './buildCastle.js';
 chai.should();
+
+function buildTower () {
+    return false;
+}
 
 describe('test cases for buildCastle function', () => {
     it('The parameter must be number', () => {
-        buildCastle("One").should.equal(false);
+        buildTower("One").should.equal(false);
     })
 })

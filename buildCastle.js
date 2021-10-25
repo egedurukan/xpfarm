@@ -1,3 +1,3 @@
-var buildCastle = () => {
-
+export function buildTower () {
+    return false;
 }
