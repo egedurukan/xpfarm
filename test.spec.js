@@ -9,6 +9,8 @@ function buildTower (floor) {
     if(!validateParameter(floor)) return false
 
     let towerLine = "";
+    let lineSpace = "";
+    let spaceCounter = 0;
     for(i = 0; i < floor; i++){
         if(i === 0) {
             towerLine += "*";
@@ -16,7 +18,17 @@ function buildTower (floor) {
             towerLine += "**";
         }
 
+        towerLine = lineSpace + towerLine + lineSpace;
+
         towerArray.push(towerLine);
+    }
+
+    for(k = 0; k < towerArray[towerArray.length-1].length; k++){
+        spaceCounter = (towerArray[towerArray.length-1].length - towerArray[i].length) / 2
+        for(j = 0; j < spaceCounter; j++){
+            lineSpace += " ";
+        }
+        towerArray[k] = lineSpace + towerArray[i] + lineSpace;
     }
     
     return towerArray;
